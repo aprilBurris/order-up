@@ -1,15 +1,9 @@
 console.log("Hello all")
 
 //Array that describe
-const tags = ["Soul Food", "Lunch", "Dinner"
-]
+const tags = ["Soul Food", "Lunch", "Dinner"]
 //Array with prices
-const prices = [
-    15.99,
-    17.99,
-    8.99,
-    9.99
-]
+const prices = [15.99, 17.99, 8.99, 9.99]
 console.log(tags)
 console.log(prices)
 
@@ -20,3 +14,11 @@ tagText.textContent = "";
 for (let i = 0; i < tags.length; i++) {
     tagText.textContent = tagText.textContent + tags[i] + " . ";
 }
+
+let total = 0;
+
+for (let i = 0; i < prices.length; i++) {
+    total = total + prices[i];
+}
+
+document.querySelector("#total").textContent = "$" + total;
